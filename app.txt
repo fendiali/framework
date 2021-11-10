@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Judul</title>
+    <!-- Favicon / gambar format .ico
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> -->
+	<!-- css framework nek ditulis nangkene kedawan -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fendiali/framework@main/app.css" />
+</head>
+<body>
+    <header class=app-header>
+        <nav class=navbar>
+          <div class=container>
+            <div class=navbar-brand>
+              <div class=navbar-item>
+                <a class=brand href="/">
+                  <div class=brand-icon>
+                      <!-- ganti logo sing kotak -->
+                    <img alt="Nama web" role=presentation src="https://www.fendiali.net/img/fendiali-icon.png" />
+                  </div>
+                  <div class=brand-content>
+                    <div class=brand-title> Nama web </div>
+                    <div class=brand-subtitle> Subjudul/slogan </div>
+                  </div>
+                </a>
+              </div>
+              <div class="navbar-burger burger" data-target=mainNav>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <!-- menu navigasui -->
+            <div class=navbar-menu id=mainNav>
+              <div class=navbar-end>
+                <a href="/" class="navbar-item is-active">Home</a>
+                <a href="#" class="navbar-item ">Profil Sekolah</a>
+                <a href="#" class="navbar-item ">Visi & Misi</a>
+                <a href="#" class="navbar-item ">Ekstrakurikuler</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main class=app-content>
+        <section class="section is-hero">
+          <div class=container>
+            <div class="columns is-vcentered">
+              <div class="column is-6 is-5-fullhd is-offset-1-fullhd">
+                <div class=section-header>
+                  <h1 class="title is-spaced"> Judul banget </h1>
+                  <h2 class="subtitle is-3"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h2>
+                  <div class="field is-grouped">
+                    <div class=control>
+                      <a class="button is-primary is-medium" href="#">Tombol apa</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-6">
+                <div class=section-media>
+                    <!-- ganti link gambar -->
+                  <img role=presentation src="https://image.freepik.com/free-vector/students-with-laptops-sitting-around-lector-interactive-board-illustration_335657-261.jpg" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="app-footer section is-medium">
+        <!-- di ilangna disit <div class=container>
+              <div class=columns>
+                <div class="column is-4">
+                  <div class=menu>
+                    <p class=menu-label> Kontak Kami </p>
+                    <p>pppp</p>
+                  </div>
+                </div>
+                <div class="column is-4">
+                  <div class=menu>
+                    <p class=menu-label> Terhubung </p>
+                    <ul class=menu-list>
+                      <li>
+                        <a href="#" target=_blank>Facebook </a>
+                      </li>
+                      <li>
+                        <a href="#" target=_blank>Instagram </a>
+                      </li>
+                      <li>
+                        <a href="#" target=_blank>Twitter </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="column is-4">
+                    <p>&copy Nama web</p>
+                </div>
+              </div>
+            </div>
+        </div> -->
+      </footer>
+<script>
+    //js menu navigasi
+    document.addEventListener('DOMContentLoaded', () => {
+const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+if ($navbarBurgers.length > 0) {
+  $navbarBurgers.forEach( el => {
+    el.addEventListener('click', () => {
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+
+    });
+  });
+}
+
+});
+</script>
+</body>
+</html>
